@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -Eeo pipefail
 
+# this file just helps running ansible roles locally
+
 # make relative paths play nicely
 cd $(dirname $0)/..
 
