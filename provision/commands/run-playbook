@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -Eeo pipefail
+
+# make relative paths play nicely
+cd $(dirname $0)/..
+
+export ANSIBLE_ROLES_PATH=$ANSIBLE_ROLES_PATH:$(pwd)/roles
+
+ansible-playbook ./playbooks/"${1}" -i inventories/localhost/hosts
+
